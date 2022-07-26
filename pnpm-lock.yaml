@@ -9,6 +9,7 @@ specifiers:
   '@embroider/webpack': ^1.6.0
   '@glimmer/component': ^1.1.2
   '@glimmer/tracking': ^1.1.2
+  '@types/ember': ^4.0.0
   '@types/ember-data': ^4.4.0
   '@types/ember-data__adapter': ^4.0.0
   '@types/ember-data__model': ^4.0.0
@@ -82,6 +83,7 @@ devDependencies:
   '@embroider/webpack': 1.8.3_6ieuvvsbaka5ylmi63qvoovikm
   '@glimmer/component': 1.1.2_@babel+core@7.18.9
   '@glimmer/tracking': 1.1.2
+  '@types/ember': 4.0.0
   '@types/ember-data': 4.4.0
   '@types/ember-data__adapter': 4.0.0
   '@types/ember-data__model': 4.0.0

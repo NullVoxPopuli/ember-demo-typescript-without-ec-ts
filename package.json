@@ -31,6 +31,7 @@
     "@embroider/webpack": "^1.6.0",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
+    "@types/ember": "^4.0.0",
     "@types/ember-data": "^4.4.0",
     "@types/ember-data__adapter": "^4.0.0",
     "@types/ember-data__model": "^4.0.0",
