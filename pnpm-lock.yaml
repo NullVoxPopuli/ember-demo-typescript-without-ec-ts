@@ -1,5 +1,8 @@
 lockfileVersion: 5.4
 
+overrides:
+  '@types/eslint': ^7.0.0
+
 specifiers:
   '@babel/core': ^7.18.9
   '@ember/optional-features': ^2.0.0
@@ -2875,7 +2878,7 @@ packages:
   /@types/eslint-scope/3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
-      '@types/eslint': 8.4.5
+      '@types/eslint': 7.29.0
       '@types/estree': 0.0.51
     dev: true
 
@@ -2883,13 +2886,6 @@ packages:
     resolution: {integrity: sha512-VNcvioYDH8/FxaeTKkM4/TiTwt6pBV9E3OfGmvaw8tPl0rrHCJ4Ll15HRT+pMiFAf/MLQvAzC+6RzUMEL9Ceng==}
     dependencies:
       '@types/estree': 1.0.0
-      '@types/json-schema': 7.0.11
-    dev: true
-
-  /@types/eslint/8.4.5:
-    resolution: {integrity: sha512-dhsC09y1gpJWnK+Ff4SGvCuSnk9DaU0BJZSzOwa6GVSg65XtTugLBITDAAzRU5duGBoXBHpdR/9jHGxJjNflJQ==}
-    dependencies:
-      '@types/estree': 0.0.51
       '@types/json-schema': 7.0.11
     dev: true
 
