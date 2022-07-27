@@ -3,6 +3,11 @@ lockfileVersion: 5.4
 overrides:
   '@types/eslint': ^7.0.0
 
+patchedDependencies:
+  '@embroider/compat@1.8.3':
+    hash: 3puj62vtk5gs4v7yhk67akgj3e
+    path: patches/@embroider__compat@1.8.3.patch
+
 specifiers:
   '@babel/core': ^7.18.9
   '@ember/optional-features': ^2.0.0
@@ -80,7 +85,7 @@ devDependencies:
   '@babel/core': 7.18.9
   '@ember/optional-features': 2.0.0
   '@ember/test-helpers': 2.8.1_o7bju425yuq6zhvvb4nkxsunay
-  '@embroider/compat': 1.8.3_@embroider+core@1.8.3
+  '@embroider/compat': 1.8.3_3puj62vtk5gs4v7yhk67akgj3e_@embroider+core@1.8.3
   '@embroider/core': 1.8.3
   '@embroider/webpack': 1.8.3_6ieuvvsbaka5ylmi63qvoovikm
   '@glimmer/component': 1.1.2_@babel+core@7.18.9
@@ -2104,7 +2109,7 @@ packages:
       - webpack
     dev: true
 
-  /@embroider/compat/1.8.3_@embroider+core@1.8.3:
+  /@embroider/compat/1.8.3_3puj62vtk5gs4v7yhk67akgj3e_@embroider+core@1.8.3:
     resolution: {integrity: sha512-hKBHYjfLY9IIAyIUDWec2XDMPFS9KLcQFaE3QZyr2bzm2srg0uGCTfATnadnxOttQutrjaLn6amvd6QahDWutg==}
     engines: {node: 12.* || 14.* || >= 16}
     hasBin: true
@@ -2154,6 +2159,7 @@ packages:
       - supports-color
       - utf-8-validate
     dev: true
+    patched: true
 
   /@embroider/core/1.8.3:
     resolution: {integrity: sha512-/VdguyT/yhibgrjxL/J1ZFLvHo3EvUaBAxu9jAT3CYO9hIjWUKmJ81EZ0uK4zWykdifaefoz1/ctHnFjvm3/+w==}

@@ -104,6 +104,9 @@
   "pnpm": {
     "overrides": {
       "@types/eslint": "^7.0.0"
+    },
+    "patchedDependencies": {
+      "@embroider/compat@1.8.3": "patches/@embroider__compat@1.8.3.patch"
     }
   }
 }
