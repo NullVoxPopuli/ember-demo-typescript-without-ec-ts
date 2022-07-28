@@ -1,26 +1,27 @@
 diff --git a/src/compat-app.js b/src/compat-app.js
-index fd6f49725fea676d8673c2717a3afbd59c427fd5..2f6245974f3fd8cfe7f48a2848b5d153a4c5ab29 100644
+index fd6f49725fea676d8673c2717a3afbd59c427fd5..b6b3676487971ad6cd124e16482e9a3fb33d1d14 100644
 --- a/src/compat-app.js
 +++ b/src/compat-app.js
-@@ -170,7 +170,7 @@ class CompatAppAdapter {
+@@ -170,21 +170,7 @@ class CompatAppAdapter {
          // webpack's default is ['.wasm', '.mjs', '.js', '.json']. Keeping that
          // subset in that order is sensible, since many third-party libraries will
          // expect it to work that way.
 -        let extensions = ['.wasm', '.mjs', '.js', '.json', '.hbs'];
-+        let extensions = ['.wasm', '.mjs', '.js', '.json', '.hbs', '.ts'];
-         // for now, this is hard-coded. If we see ember-cli-typescript, ts files are
-         // resolvable. Once we implement a preprocessor-registration build hook,
-         // this logic can be pushed down first into `@embroider/compat` (which can
-@@ -181,9 +181,9 @@ class CompatAppAdapter {
-         // Typescript is a slightly weird example of a preprocessor because it gets
-         // implemented in babel, so all we realy need to do is make the extension
-         // resolvable and there's no other "loader" or anything to apply.
+-        // for now, this is hard-coded. If we see ember-cli-typescript, ts files are
+-        // resolvable. Once we implement a preprocessor-registration build hook,
+-        // this logic can be pushed down first into `@embroider/compat` (which can
+-        // generate the appropriate hooks when it upcompiles ember-cli-typescript),
+-        // and then later into ember-cli-typescript itself (which can ship a v2
+-        // version with the hook).
+-        //
+-        // Typescript is a slightly weird example of a preprocessor because it gets
+-        // implemented in babel, so all we realy need to do is make the extension
+-        // resolvable and there's no other "loader" or anything to apply.
 -        if (this.activeAddonChildren().find(pkg => pkg.name === 'ember-cli-typescript')) {
 -            extensions.unshift('.ts');
 -        }
-+        // if (this.activeAddonChildren().find(pkg => pkg.name === 'ember-cli-typescript')) {
-+        //     extensions.unshift('.ts');
-+        // }
-         return extensions;
+-        return extensions;
++        return ['.ts', '.wasm', '.mjs', '.js', '.json', '.hbs'];
      }
      *emberEntrypoints(htmlTreePath) {
+         let classicEntrypoints = [

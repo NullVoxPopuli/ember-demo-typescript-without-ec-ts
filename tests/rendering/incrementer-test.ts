@@ -18,5 +18,18 @@ module('Rendering', function (hooks) {
     await click('button');
     assert.dom('out').hasText('1');
   });
+
+  test('one file: increments', async function (assert) {
+    await render(hbs`
+      <OneFile as |count|>
+        <out>{{count}}</out>
+      </OneFile>
+    `);
+
+    assert.dom('out').hasText('0');
+
+    await click('button');
+    assert.dom('out').hasText('1');
+  });
 });
 
